@@ -1,0 +1,57 @@
+{
+  "mcpServers": {
+    "f-sherwood-rowland-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "ROWLAND",
+        "TARGET_CHAIN": "Sui",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "verify_f_sherwood_rowland_discovery",
+          "description": "Verifies core invariant principles: Co-discovered CFC threat leading directly to Montreal Protocol ozone protection treaty",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "input_data": {
+                "type": "string"
+              },
+              "precision_level": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "input_data"
+            ]
+          }
+        },
+        {
+          "name": "model_f_sherwood_rowland_telemetry",
+          "description": "Models high-assurance domain telemetry for Atmospheric Chemistry",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "telemetry_vector": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "required": [
+              "telemetry_vector"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
